@@ -129,16 +129,17 @@ for item in items:
         if question_id in questions.keys():
             questions[question_id].add_answer(answer)
         else:
-            # print question_id, 'not found'
             pass
 
     users[user_id] = user
 
-# print row_with_no_user_id, 'rows with no id'
-# print_user_csv(users)
+print row_with_no_user_id, 'rows with no id'
+
+print_user_csv(users)
+
+print 'users for returned favors'
 for k, q in questions.iteritems():
-    # q.print_poster_answerer_id()
-    pass
+    q.print_poster_answerer_id()
 
 print 'hour, posts'
 for k, v in hours.iteritems():
